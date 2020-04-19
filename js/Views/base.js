@@ -4,6 +4,7 @@ export const elements = {
   mainContainer: document.querySelector('.main_container'),
   Form: document.querySelector('.search__form'),
   searchInput: document.querySelector('.search__textInput'),
+  websiteWrapper: document.querySelector('.website__wrapper'),
 };
 
 export const renderLoader = () => {

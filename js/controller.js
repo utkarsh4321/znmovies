@@ -58,7 +58,7 @@ const paginationController = async rest => {
 
   clearUi();
   renderLoader();
-  window.scrollTo(0, 0);
+  elements.websiteWrapper.scrollTo(0, 0);
   try {
     await state.movieList.getMoviesList(pageToken, pageNo);
     hideLoader();
@@ -75,7 +75,7 @@ const movieController = async (movieId, pageNo) => {
 
     clearUi();
     renderLoader();
-    window.scrollTo(0, 0);
+    elements.websiteWrapper.scrollTo(0, 0);
 
     try {
       await state.movie.getSelectedMovies(movieId, pageNo);
