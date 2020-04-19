@@ -40,7 +40,7 @@ export const renderMoviesCard = (result, page) => {
   const moviesContainer = document.querySelector('.movies_rows');
 
   const markup = `
-    <div class="movie_card col-md-3 col-sm-3">
+    <div class="movie_card col-md-3 col-sm-6 col-xs-6 col-lg-2 col-xl-2">
     <span data-id=${id} data-pageno=${page} style="cursor:pointer;">
     <div class="card">
       <div class="card-body">
@@ -99,9 +99,6 @@ export const renderResult = rest => {
         <h3 class="mt-4 text-md-left text-center">
           Popular Movies, Web Series & Songs
         </h3>
-        <div class="text-right">
-          <a href="./moviesList.html">See more</a>
-        </div>
         <div class="row mt-4 movies_rows">
         </div>
     </section>

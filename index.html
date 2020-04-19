@@ -23,7 +23,7 @@
   </head>
 
   <body>
-    <div class="website__wrapper">
+    <div class="website__container">
       <nav
         class="navbar navbar-expand-md fixed-top px-md-5 py-md-2 custom-bar d-flex flex-row justify-content-between"
       >
@@ -41,12 +41,12 @@
             />
             <label for="search__toggle" class="search__button">
               <!-- <ion-icon name="search-outline"></ion-icon
-            > -->
+        > -->
               <!-- <img
-                src="./assets/icons8-search.svg"
-                alt="search"
-                loading="lazy"
-              /> -->
+            src="./assets/icons8-search.svg"
+            alt="search"
+            loading="lazy"
+          /> -->
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -93,10 +93,10 @@
                 />
               </form>
               <!-- 
-              <ion-icon
-                name="close-outline"
-                class="search__inputs__close"
-              ></ion-icon> -->
+          <ion-icon
+            name="close-outline"
+            class="search__inputs__close"
+          ></ion-icon> -->
               <span class="search__inputs__close">X</span>
             </div>
           </li>
@@ -116,39 +116,42 @@
           </li>
         </ul>
       </nav>
-
-      <div class="main_container"></div>
-      <div class="modal-fade"></div>
-      <div class="made__modal mx-4" id="myModal">
-        <div class="card">
-          <!-- <ion-icon name="close-outline" class="modal-icon"></ion-icon> -->
-          <span class="modal-icon">X</span>
-          <div class="card-body">
-            <h1>Updates!</h1>
-            <p class="lead">
-              New movies,webseries are updated every sunday for stay updated
-              with new movies. Please do suscribe our Blog to get latest movie
-              in your inbox.
-            </p>
-            <p>
-              <strong>Please click the below button to suscribe</strong>
-            </p>
-            <a
-              href="https://znmovies.blogspot.com/"
-              class="btn btn-block text-uppercase"
-              >suscribe</a
-            >
+      <div class="website__wrapper">
+        <div class="main_container"></div>
+        <section class="footer__section">
+          <div>
+            <h5 class="text-center text-uppercase">
+              copright &copy; 2020,znmovies
+            </h5>
+          </div>
+        </section>
+      </div>
+      <div class="modal-fade">
+        <div class="made__modal mx-4" id="myModal">
+          <div class="card">
+            <!-- <ion-icon name="close-outline" class="modal-icon"></ion-icon> -->
+            <span class="modal-icon">X</span>
+            <div class="card-body">
+              <h1>Updates!</h1>
+              <p class="lead">
+                New movies,webseries are updated every sunday for stay updated
+                with new movies. Please do suscribe our Blog to get latest movie
+                in your inbox.
+              </p>
+              <p>
+                <strong>Please click the below button to suscribe</strong>
+              </p>
+              <a
+                href="https://znmovies.blogspot.com/"
+                class="btn btn-block text-uppercase"
+                >suscribe</a
+              >
+            </div>
           </div>
         </div>
       </div>
-      <section class="footer__section">
-        <div>
-          <h5 class="text-center text-uppercase">
-            copright &copy; 2020,znmovies
-          </h5>
-        </div>
-      </section>
     </div>
+
     <!-- End Of content -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

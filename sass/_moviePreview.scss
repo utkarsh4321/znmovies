@@ -30,8 +30,9 @@
   // max-width: 360px;
   // display: flex;
   // width: 100%;
-  position: absolute;
-  top: 67px;
+  // position: absolute;
+  // top: 67px;
+  // width: 100%;
   animation-name: ram;
   animation-duration: 1.5s;
   z-index: 99999;
@@ -39,7 +40,7 @@
   // justify-content: center;
   @media screen and(min-width:760px) {
     width: 50%;
-    left: 23%;
+    // left: 23%;
   }
   .card {
     // width: 100%;
@@ -100,6 +101,9 @@
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.2s ease-in;
   background: rgba(0, 0, 0, 0.7);
   z-index: 9999;
