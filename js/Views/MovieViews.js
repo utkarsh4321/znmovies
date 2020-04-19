@@ -131,12 +131,18 @@ export const renderMovie = ({
     const markups = `
 
   <div class="container mt-5">
-       ${content}
-      <section class="movie__preview">
           <div class="container text-center back_button" data-pageno=${pageNo}>
-          <h5 class="btn">Back</h5>
+          <div class="arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    width="30" height="30"
+    viewBox="0 0 172 172"
+    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g class="back__svg"><path d="M40.02135,51.54401c-1.48951,0.04438 -2.90324,0.6669 -3.94167,1.73568l-28.16276,28.16276c-1.41918,1.08154 -2.25398,2.76211 -2.25837,4.54643c-0.00439,1.78431 0.82213,3.46898 2.23597,4.55748c0.01117,0.0075 0.02237,0.01497 0.03359,0.02239l28.15156,28.15156c1.43802,1.49776 3.57339,2.1011 5.58258,1.57732c2.00919,-0.52378 3.57824,-2.09283 4.10202,-4.10202c0.52378,-2.00919 -0.07955,-4.14456 -1.57731,-5.58258l-18.87969,-18.87969h135.22604c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843h-135.22604l18.87969,-18.87969c1.69569,-1.64828 2.20555,-4.16851 1.28389,-6.3463c-0.92166,-2.17779 -3.08576,-3.56638 -5.44951,-3.49667z"></path></g></g></svg>
+    </div>
+          <h5 class="buttons">Back</h5>
         </div>
-       </section>
+      
+       ${content}
+      
   </div>
   `;
 

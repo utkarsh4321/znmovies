@@ -14,25 +14,36 @@
     border-radius: 5px;
   }
 }
-.movie__preview {
-  margin-bottom: 6rem;
+// .movie__preview {
+// margin-bottom: 6rem;
+.back_button {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
 
-  .btn {
-    width: 50%;
+  & svg {
+    // transition: all 0.2s ease-in;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    align-self: center;
+    cursor: pointer;
+  }
+  .buttons {
+    // width: 50%;
     border-radius: 5px;
-    background-color: var(--font-color);
-    color: var(--footer-color);
+    align-self: center;
+    cursor: pointer;
+    // background-color: var(--font-color);
+    color: var(--font-color);
   }
 }
+.back__svg {
+  fill: var(--font-color);
+}
+// }
 // CSS for the modal
 
 .made__modal {
-  // max-width: 360px;
-  // display: flex;
-  // width: 100%;
-  // position: absolute;
-  // top: 67px;
-  // width: 100%;
   animation-name: ram;
   animation-duration: 1.5s;
   z-index: 99999;
@@ -69,9 +80,9 @@
   }
   .modal-icon {
     position: absolute;
-    top: 7px;
-    right: 8px;
-    font-size: 2rem;
+    top: 11px;
+    right: 16px;
+    // font-size: 2rem;
     cursor: pointer;
     display: inline;
   }
