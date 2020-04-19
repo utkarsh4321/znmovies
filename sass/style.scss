@@ -1,0 +1,209 @@
+@function hexToRgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+:root {
+  --primary-color: #141414;
+  // --primary-color: rgba(0, 0, 0, 0.8);
+  --primary-color-rgb: #{hexToRgb(#141414)};
+  --footer-color: #191919;
+  --font-color: #f8b815;
+  --icon-color: #b5b9bc;
+  --nav-initial-color: rgba(0, 0, 0, 0.5);
+  --box-shadow-movie-card: #{hexToRgb(#f8b815)};
+
+  .navbar .custom-switch .custom-control-label::after {
+    background-color: transparent;
+    margin-left: 0.6rem;
+    box-shadow: -7px 0px 0 0 #e6e1e1;
+    height: calc(1rem + 2px);
+    width: calc(1rem + 2px);
+    color: green;
+    margin-top: 1px;
+  }
+  .navbar .custom-control-label::before {
+    background: transparent;
+    border: 1px solid #fff;
+    width: 3.6rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+  }
+}
+[dark-theme="light"] {
+  --primary-color: #fff;
+  // --primary-color:rgba(255,255,255,.8);
+  --primary-color-rgb: #{hexToRgb(#fff)};
+  --footer-color: #f4f4f4;
+  --font-color: #000;
+  --icon-color: #b5b9bc;
+  --nav-initial-color: rgba(255, 255, 255, 0.5);
+  --box-shadow-movie-card: #{hexToRgb(#000)};
+  .navbar .custom-switch .custom-control-label::after {
+    background-color: #f8b815;
+    box-shadow: none;
+    height: calc(1rem + 2px);
+    width: calc(1rem + 2px);
+    border-radius: 100%;
+    transform: translateX(1.78rem);
+    margin-top: 1px;
+    margin-left: 5px;
+  }
+  .navbar .custom-control-label::before {
+    background: transparent;
+    border: 1px solid #f8b815;
+    width: 3.6rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+  }
+}
+
+body {
+  background-color: var(--primary-color);
+  // transition: all .5s ease;
+  color: var(--font-color);
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-moz-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  &::-moz-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  &::-moz-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &::-moz-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+.website__wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .navbar {
+    flex: 0 0 auto;
+  }
+  .main_container {
+    margin-top: 4rem;
+    flex: 1 1 auto;
+  }
+  .footer__section {
+    flex: 0 0 auto;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--font-color);
+  &:hover,
+  &:active {
+    color: var(--font-color);
+  }
+}
+.svg__fill {
+  fill: var(--font-color);
+}
+.svg__fills {
+  fill: var(--footer-color);
+}
+// Footer
+.footer__section {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+
+  background-color: var(--footer-color);
+}
+.sl--content-container {
+  background-color: var(--primary-color);
+}
+
+// CSS FOR LOADER
+.loader {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.line {
+  animation: expand 1s ease-in-out infinite;
+  border-radius: 10px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 10px;
+  width: 10px;
+  height: 5rem;
+
+  // @media only screen and (max-width: $bp-small) {
+  //   width: 6px;
+  //   height: 3.5rem;
+  // }
+
+  // @media only screen and (max-width: $bp-small) {
+  //   width: 5px;
+  //   height: 3rem;
+  // }
+}
+
+.line:nth-child(1) {
+  background: var(--font-color);
+}
+
+.line:nth-child(2) {
+  animation-delay: 180ms;
+  background: var(--font-color);
+}
+
+.line:nth-child(3) {
+  animation-delay: 360ms;
+  background: var(--font-color);
+}
+
+.line:nth-child(4) {
+  animation-delay: 540ms;
+  background: var(--font-color);
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(2);
+  }
+}
+// .slick-slide {
+//   & .card,
+//   .card-body {
+//     height: 22rem;
+//   }
+// }
+
+@import "common";
+@import "media";
+@import "navbar";
+@import "card";
+@import "moviePreview";

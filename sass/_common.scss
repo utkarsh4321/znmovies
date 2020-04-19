@@ -1,0 +1,112 @@
+// Mixin for ssame style
+@mixin btn_style($opactiy, $background) {
+  .card-body {
+    @if ($background) {
+      &::after,
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale3d(0, 0, 1);
+        transition: transform 0.3s ease-out 0s;
+        // @if #{var(--primary-color)} == #fff {
+        //   background: rgba(255, 255, 255, 0.1);
+        // } @else {
+        //   background: rgba(0, 0, 0, 0.1);
+        // }
+        background: rgba(var(--primary-color-rgb), 0.3);
+        content: "";
+        pointer-events: none;
+      }
+      &::after {
+        transform-origin: left top;
+      }
+      &::before {
+        transform-origin: right bottom;
+      }
+      //   background: rgba(0, 0, 0, 0.6);
+    } @else {
+      &:after {
+        content: "\A";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+          to top,
+          rgba(20, 20, 20, 0.99),
+          rgba(20, 20, 20, 0)
+        );
+        transition: background 0.5s;
+        -webkit-transition: background 0.5s;
+        opacity: $opactiy;
+        border-radius: 4px;
+      }
+    }
+    // background: rgba(0, 0, 0, 0.6);
+
+    // border-radius: 4px;
+  }
+  .card-body .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    //   box-shadow: 10px -6px 0 red;
+    box-shadow: inset 0 2px 0 3px var(--font-color);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    // z-index: 3;
+    & svg {
+      fill: var(--font-color);
+    }
+  }
+}
+
+// Style for pagination
+
+.pagination_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem auto 0 auto;
+
+  & .button {
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
+    background: var(--font-color);
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    margin: 0 3rem;
+    border-radius: 100%;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    // padding: 1rem;
+    &:disabled {
+      // color: #fff;
+      opacity: 0.5;
+      cursor: no-drop;
+    }
+  }
+}
