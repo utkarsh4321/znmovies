@@ -16,6 +16,9 @@
         margin-top: 0;
       }
     }
+    @media (min-width: 360px) and (max-width: 767px) {
+      width: 50%;
+    }
     @media (min-width: 580px) and (max-width: 767px) {
       &:first-child,
       &:nth-child(2) {
